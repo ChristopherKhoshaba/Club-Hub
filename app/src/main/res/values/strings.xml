@@ -5,4 +5,11 @@
     <string name="login_button">Login</string>
     <string name="registration_prompt">No Account?</string>
     <string name="registration_button">Tap here!</string>
+    <string name="createUsername_prompt">Create Name</string>
+    <string name="createPassword_prompt">Create Password</string>
+    <string name="confirmPassword_prompt">Confirm Password</string>
+    <string name="createAccount_button">Start!</string>
+    <string name="alreadyRegistered_prompt">Already Registered?</string>
+    <string name="alreadyRegister_button">Login!</string>
+
 </resources>
