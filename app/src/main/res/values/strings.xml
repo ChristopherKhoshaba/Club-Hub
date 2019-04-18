@@ -3,6 +3,6 @@
     <string name="username_prompt">Name</string>
     <string name="password_prompt">Password</string>>
     <string name="login_button">Login</string>
-    <string name="registration_prompt">Need An Account?</string>
+    <string name="registration_prompt">No Account?</string>
     <string name="registration_button">Tap here!</string>
 </resources>
