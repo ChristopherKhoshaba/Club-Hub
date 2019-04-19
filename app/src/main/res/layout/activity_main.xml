@@ -41,19 +41,14 @@
         android:paddingLeft="5dp" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
         android:layout_marginTop="12dp"
         android:textColorHint="#000000"
         android:textStyle="bold"
         android:id="@+id/button_login"
         android:background="@drawable/textview_border"
         android:hint="@string/login_button" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
 
         <TextView
             android:layout_width="100dp"
@@ -64,20 +59,7 @@
             android:textStyle="bold"
             android:textColor="#e74b25"
             android:paddingTop="8dp"
+            android:id="@+id/textView_register"
             android:text="@string/registration_prompt" />
 
-        <TextView
-            android:layout_width="75dp"
-            android:layout_height="35dp"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/textview_border"
-            android:id="@+id/textView_register"
-            android:textStyle="bold"
-            android:textColor="#003d7e"
-            android:paddingLeft="8dp"
-            android:paddingTop="8dp"
-            android:text="@string/registration_button" />
-
-    </LinearLayout>
 </LinearLayout>
