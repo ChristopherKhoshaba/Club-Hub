@@ -44,15 +44,23 @@ public class RegisterActivity extends AppCompatActivity {
 
                 if(pwd.equals(cnf_pwd)) {
                     long val = db.addUser(user,pwd);
-                    if (val > 0) {
+                    if (val > 0 && user.length() > 2 && user.length() < 12 && pwd.length() > 5 && !user.contains(" ")) {
                         Toast.makeText(RegisterActivity.this, "Successfully Created Account", Toast.LENGTH_SHORT).show();
                         Intent moveToLogin = new Intent(RegisterActivity.this, MainActivity.class);
                         startActivity(moveToLogin);
+                    } else if (!(user.length() > 2)) {
+                        Toast.makeText(RegisterActivity.this, "Username must be at least 3 characters long", Toast.LENGTH_SHORT).show();
+                    } else if (!(user.length() < 12)) {
+                        Toast.makeText(RegisterActivity.this, "Username can't be greater than 11 characters long", Toast.LENGTH_SHORT).show();
+                    } else if (user.contains(" ")) {
+                        Toast.makeText(RegisterActivity.this, "Username can't contain spaces", Toast.LENGTH_SHORT).show();
+                    } else if (!(pwd.length() > 5)) {
+                        Toast.makeText(RegisterActivity.this, "Password must be 6 characters or greater", Toast.LENGTH_SHORT).show();
                     } else {
                         Toast.makeText(RegisterActivity.this, "Registration Error", Toast.LENGTH_SHORT).show();
                     }
                 } else {
-                    Toast.makeText(RegisterActivity.this, "Incorrect Password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "Passwords don't match", Toast.LENGTH_SHORT).show();
                 }
             }
         });
