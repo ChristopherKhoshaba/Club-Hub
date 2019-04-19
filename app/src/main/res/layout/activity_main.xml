@@ -36,6 +36,7 @@
         android:background="@drawable/textview_border"
         android:drawableLeft="@drawable/orange_lock"
         android:drawablePadding="5dp"
+        android:inputType="textPassword"
         android:hint="@string/password_prompt"
         android:paddingLeft="5dp" />
 
