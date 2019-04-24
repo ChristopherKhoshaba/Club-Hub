@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
     EditText mTextUsername;
     EditText mTextPassword;
     Button mButtonLogin;
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
 
         db = new DatabaseHelper(this);
         mTextUsername = (EditText) findViewById(R.id.editText_username);
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         mTextViewRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent registerIntent = new Intent(MainActivity.this,RegisterActivity.class);
+                Intent registerIntent = new Intent(LoginActivity.this,RegisterActivity.class);
                 startActivity(registerIntent);
             }
         });
@@ -42,9 +42,9 @@ public class MainActivity extends AppCompatActivity {
                 String pwd = mTextPassword.getText().toString().trim();
                 Boolean res = db.checkUser(user, pwd);
                 if (res) {
-                    Toast.makeText(MainActivity.this, "Successfully Logged in", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Successfully Logged in", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(MainActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
                 }
             }
         });
