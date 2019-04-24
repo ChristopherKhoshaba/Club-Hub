@@ -31,7 +31,7 @@ public class RegisterActivity extends AppCompatActivity {
         mTextViewLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent LoginIntent = new Intent(RegisterActivity.this,MainActivity.class);
+                Intent LoginIntent = new Intent(RegisterActivity.this,LoginActivity.class);
                 startActivity(LoginIntent);
             }
         });
@@ -46,7 +46,7 @@ public class RegisterActivity extends AppCompatActivity {
                     long val = db.addUser(user,pwd);
                     if (val > 0 && user.length() > 2 && user.length() < 12 && pwd.length() > 5 && !user.contains(" ")) {
                         Toast.makeText(RegisterActivity.this, "Successfully Created Account", Toast.LENGTH_SHORT).show();
-                        Intent moveToLogin = new Intent(RegisterActivity.this, MainActivity.class);
+                        Intent moveToLogin = new Intent(RegisterActivity.this, LoginActivity.class);
                         startActivity(moveToLogin);
                     } else if (!(user.length() > 2)) {
                         Toast.makeText(RegisterActivity.this, "Username must be at least 3 characters long", Toast.LENGTH_SHORT).show();

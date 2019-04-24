@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_copy"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="98dp"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/illini_rso_image" />
+
+
+
+    <EditText
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="105dp"
+        android:id="@+id/editText_username"
+        android:drawableLeft="@drawable/login_image"
+        android:drawablePadding="5dp"
+        android:hint="@string/username_prompt"
+        android:paddingLeft="5dp"
+        android:background="@drawable/textview_border"/>
+
+    <EditText
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/editText_password"
+        android:background="@drawable/textview_border"
+        android:drawableLeft="@drawable/orange_lock"
+        android:drawablePadding="5dp"
+        android:inputType="textPassword"
+        android:hint="@string/password_prompt"
+        android:paddingLeft="5dp" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="12dp"
+        android:textColorHint="#000000"
+        android:textStyle="bold"
+        android:id="@+id/button_login"
+        android:background="@drawable/textview_border"
+        android:hint="@string/login_button" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/textview_border"
+            android:paddingLeft="10dp"
+            android:textStyle="bold"
+            android:textColor="#e74b25"
+            android:paddingTop="8dp"
+            android:id="@+id/textView_register"
+            android:text="@string/registration_prompt" />
+
+</LinearLayout>
