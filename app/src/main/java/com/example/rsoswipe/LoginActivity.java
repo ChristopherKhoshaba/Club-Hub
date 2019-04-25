@@ -43,6 +43,8 @@ public class LoginActivity extends AppCompatActivity {
                 Boolean res = db.checkUser(user, pwd);
                 if (res) {
                     Toast.makeText(LoginActivity.this, "Successfully Logged in", Toast.LENGTH_SHORT).show();
+                    Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(loginIntent);
                 } else {
                     Toast.makeText(LoginActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
                 }
