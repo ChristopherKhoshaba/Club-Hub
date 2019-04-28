@@ -3,7 +3,7 @@ package codingnojutsu.clubhub
 data class Spot(
     val id: Long = counter++,
     val name: String,
-    val city: String,
+    val type: String,
     val url: String
 ) {
     companion object {
