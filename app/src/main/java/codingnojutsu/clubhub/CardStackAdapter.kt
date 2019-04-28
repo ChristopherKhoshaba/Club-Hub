@@ -1,4 +1,4 @@
-package com.example.rsoswipe
+package codingnojutsu.clubhub
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -10,7 +10,7 @@ import android.widget.Toast
 import com.bumptech.glide.Glide
 
 class CardStackAdapter(
-        private var spots: List<Spot> = emptyList()
+    private var spots: List<Spot> = emptyList()
 ) : RecyclerView.Adapter<CardStackAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -23,8 +23,8 @@ class CardStackAdapter(
         holder.name.text = "${spot.id}. ${spot.name}"
         holder.city.text = spot.city
         Glide.with(holder.image)
-                .load(spot.url)
-                .into(holder.image)
+            .load(spot.url)
+            .into(holder.image)
         holder.itemView.setOnClickListener { v ->
             Toast.makeText(v.context, spot.name, Toast.LENGTH_SHORT).show()
         }

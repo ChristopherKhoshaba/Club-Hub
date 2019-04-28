@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">RSOSwipe</string>
+    <string name="app_name">Club Hub</string>
     <string name="username_prompt">Name</string>
     <string name="password_prompt">Password</string>>
     <string name="login_button">Login</string>

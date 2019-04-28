@@ -1,10 +1,10 @@
-package com.example.rsoswipe
+package codingnojutsu.clubhub
 
 import android.support.v7.util.DiffUtil
 
 class SpotDiffCallback(
-        private val old: List<Spot>,
-        private val new: List<Spot>
+    private val old: List<Spot>,
+    private val new: List<Spot>
 ) : DiffUtil.Callback() {
 
     override fun getOldListSize(): Int {

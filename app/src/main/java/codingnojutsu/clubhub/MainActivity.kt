@@ -1,4 +1,4 @@
-package com.example.rsoswipe
+package codingnojutsu.clubhub
 
 import android.os.Bundle
 import android.support.design.widget.NavigationView
@@ -28,7 +28,6 @@ class MainActivity : AppCompatActivity(), CardStackListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setupNavigation()
         setupCardStackView()
         setupButton()
     }
@@ -73,7 +72,6 @@ class MainActivity : AppCompatActivity(), CardStackListener {
     private fun setupNavigation() {
         // Toolbar
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
-        setSupportActionBar(toolbar)
 
         // DrawerLayout
         val actionBarDrawerToggle = ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open_drawer, R.string.close_drawer)
@@ -105,10 +103,10 @@ class MainActivity : AppCompatActivity(), CardStackListener {
         val skip = findViewById<View>(R.id.skip_button)
         skip.setOnClickListener {
             val setting = SwipeAnimationSetting.Builder()
-                    .setDirection(Direction.Left)
-                    .setDuration(Duration.Normal.duration)
-                    .setInterpolator(AccelerateInterpolator())
-                    .build()
+                .setDirection(Direction.Left)
+                .setDuration(Duration.Normal.duration)
+                .setInterpolator(AccelerateInterpolator())
+                .build()
             manager.setSwipeAnimationSetting(setting)
             cardStackView.swipe()
         }
@@ -116,10 +114,10 @@ class MainActivity : AppCompatActivity(), CardStackListener {
         val rewind = findViewById<View>(R.id.rewind_button)
         rewind.setOnClickListener {
             val setting = RewindAnimationSetting.Builder()
-                    .setDirection(Direction.Bottom)
-                    .setDuration(Duration.Normal.duration)
-                    .setInterpolator(DecelerateInterpolator())
-                    .build()
+                .setDirection(Direction.Bottom)
+                .setDuration(Duration.Normal.duration)
+                .setInterpolator(DecelerateInterpolator())
+                .build()
             manager.setRewindAnimationSetting(setting)
             cardStackView.rewind()
         }
@@ -127,10 +125,10 @@ class MainActivity : AppCompatActivity(), CardStackListener {
         val like = findViewById<View>(R.id.like_button)
         like.setOnClickListener {
             val setting = SwipeAnimationSetting.Builder()
-                    .setDirection(Direction.Right)
-                    .setDuration(Duration.Normal.duration)
-                    .setInterpolator(AccelerateInterpolator())
-                    .build()
+                .setDirection(Direction.Right)
+                .setDuration(Duration.Normal.duration)
+                .setInterpolator(AccelerateInterpolator())
+                .build()
             manager.setSwipeAnimationSetting(setting)
             cardStackView.swipe()
         }
@@ -265,9 +263,9 @@ class MainActivity : AppCompatActivity(), CardStackListener {
 
     private fun createSpot(): Spot {
         return Spot(
-                name = "Yasaka Shrine",
-                city = "Kyoto",
-                url = "https://source.unsplash.com/Xq1ntWruZQI/600x800"
+            name = "Yasaka Shrine",
+            city = "Kyoto",
+            url = "https://source.unsplash.com/Xq1ntWruZQI/600x800"
         )
     }
 

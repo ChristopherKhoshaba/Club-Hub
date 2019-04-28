@@ -1,4 +1,4 @@
-package com.example.rsoswipe;
+package codingnojutsu.clubhub;
 
 import android.content.Context;
 import android.database.Cursor;
